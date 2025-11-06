@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
-import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.OutlinedTextField
@@ -61,7 +60,7 @@ fun FormIsian(
                 modifier = Modifier
                     .padding(all = 20.dp)
                     .width(250.dp),
-                thickness = Thickness,
+                thickness = 1.dp,
                 color = Color.Red
             )
 
@@ -100,7 +99,7 @@ fun FormIsian(
                 modifier = Modifier.fillMaxWidth(fraction = 1f),
                 onClick = onSubmitBtnClick
             ) {
-                Text(text = stringResource(id = "Submit"))
+                Text(text = stringResource(id = R.string.Submit))
             }
         }
     }

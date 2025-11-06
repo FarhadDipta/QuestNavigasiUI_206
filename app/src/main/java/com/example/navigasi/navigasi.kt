@@ -18,10 +18,10 @@ enum class Navigasi {
 
 @Composable
 fun DataApp(
-    navController: NavHostController = rememberNavController(),
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavHostController = rememberNavController()
 ) {
-    Scaffold { isiRuang ->
+    Scaffold(modifier = modifier) { isiRuang ->
         NavHost(
             navController = navController,
             startDestination = Navigasi.Formulir.name,
