@@ -28,3 +28,17 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.navigasi.R
+
+@Composable
+fun FormIsian(
+    jenisK: List<String> = listOf("Laki-Laki", "Perempuan"),
+    onSubmitBtnClick: () -> Unit
+){
+    Scaffold ( modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id = R.string.home), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = colorResource(id = R.color.teal_700))
+            )
+        }
+    )
